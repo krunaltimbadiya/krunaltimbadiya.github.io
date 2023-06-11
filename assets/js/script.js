@@ -38,22 +38,30 @@ $(document).ready(function () {
     });
 
     // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-       // emailjs.init("service_aa5su7a");
-          const serviceID = "service_aa5su7a";
-           const templateID = "template_rqnp04b";
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value,
+  };
 
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
-    });
+  const serviceID = "service_996ck9d";
+  const templateID = "template_rqnp04b";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
+
     // <!-- emailjs to mail contact form data -->
 
 });
