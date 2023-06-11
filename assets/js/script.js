@@ -59,7 +59,7 @@ function sendMail() {
 
     })
     .catch(err=>console.log(err));
-
+ alert("Your message not sent successfully!!")
 }
 
     // <!-- emailjs to mail contact form data -->
