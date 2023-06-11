@@ -48,7 +48,6 @@ $(document).ready(function () {
 
 //   const serviceID = "service_996ck9d";
 //   const templateID = "template_rqnp04b";
-shtml
 //     emailjs.send(serviceID, templateID, params)
 //     .then(res=>{
 //         document.getElementById("name").value = "";
