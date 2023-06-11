@@ -13,7 +13,16 @@
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="./assets/images/krunal.png" type="image/x-png">
     <title>Persional Portfolio | Krunal Timbadiya</title>
-</head>
+<script src="index.js"></script>                                      
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("hYPmLeEV-G9BPcQ6y");
+   })();
+</script>
+    </head>
 <body oncontextmenu="return true">
 
 <!-- pre loader -->
@@ -344,7 +353,7 @@
   <div class="container">
     <div class="content">
       <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
+        <img draggable="true" src="./assets/images/contact1.png" alt="">
       </div>
     <form id="contact-form">
       
@@ -364,6 +373,7 @@
         <div class="message">
         <textarea placeholder="Message" name="message" required></textarea>
         <i class="fas fa-comment-dots"></i>
+
         </div>
         </div>
       <div class="button-area">
